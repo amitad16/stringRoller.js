@@ -2,7 +2,7 @@
 
 ### Demo
 
-[https://amitad16.github.io/StringChangeStyle/](https://amitad16.github.io/StringChangeStyle/)
+[https://amitad16.github.io/stringRoller.js/](https://amitad16.github.io/stringRoller.js/)
 
 ### Dependencies
 
