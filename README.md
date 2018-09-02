@@ -1,4 +1,4 @@
-# StirngRoller.js
+# StringRoller.js
 
 ### Demo
 
