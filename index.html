@@ -1,15 +1,22 @@
 <html>
 
 <head>
-	<title>Parcel Sandbox</title>
-	<meta charset="UTF-8" />
+	<title>StringRoller.js</title>
 </head>
 
 <body>
-	<p id='a'>abcd</p>
-	<button type='button' id='change'>Change</button>
+	<p id='stringRoller'>What is this?</p>
+	<button type='button' id='roll'>Roll It</button>
 
-	<script async='async' src="./src/index.js"></script>
+	<script src="./src/stringRoller.js"></script>
+	<script>
+		window.onload = () => {
+			let rollBtn = document.querySelector("button#roll");
+			rollBtn.addEventListener("click", () => {
+				StringRoller('#stringRoller', { finalText: "This is StringRoller.js" }).roll();
+			});
+		}
+	</script>
 </body>
 
 </html>
