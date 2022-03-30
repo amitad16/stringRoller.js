@@ -11,7 +11,7 @@ No dependacies! Written in plain javascript.
 ### Syntax
 
 ```js
-StringChange(selector, { finalText: Some string }).play();
+StringChange(selector, { finalText: Some string }).roll();
 ```
 
 ### Use
@@ -27,7 +27,7 @@ window.onload = () => {
   rollBtn.addEventListener("click", () => {
     StringChange("#stringRoller", {
       finalText: "This is StringRoller.js"
-    }).play();
+    }).roll();
   });
 };
 ```

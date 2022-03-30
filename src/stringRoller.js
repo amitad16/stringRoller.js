@@ -6,7 +6,7 @@ let StringRoller = (selector, options) => {
   self.container = document.querySelector(selector);
   self.options = {
     initialText: self.container.firstChild.nodeValue,
-    finalText: options.finalText
+    finalText: options.finalText,
   };
 
   self.roll = () => {
@@ -20,9 +20,17 @@ let StringRoller = (selector, options) => {
         ? totalTime / (self.options.finalText.length * 2)
         : 25;
 
+    console.log({
+      i,
+      totalTime,
+      finalCharTime,
+      addCharTime,
+      changeCharTime,
+    });
+
     self.container.innerHTML = ".";
 
-    let replaceAt = function(index, replacement) {
+    let replaceAt = function (index, replacement) {
       return (
         this.substr(0, index) +
         replacement +
@@ -30,11 +38,9 @@ let StringRoller = (selector, options) => {
       );
     };
 
-    let manageStringState = index => {
+    let manageStringState = (index) => {
       let changeVal = setInterval(() => {
-        let random = Math.random()
-          .toString(32)
-          .substr(2, 1);
+        let random = Math.random().toString(32).substr(2, 1);
         self.container.innerHTML = replaceAt.call(
           self.container.firstChild.nodeValue,
           index,

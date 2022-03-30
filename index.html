@@ -1,22 +1,60 @@
 <html>
+  <head>
+    <title>StringRoller.js</title>
+    <style>
+      #wrapper {
+        display: flex;
+        height: 100vh;
+        width: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
 
-<head>
-	<title>StringRoller.js</title>
-</head>
+      #stringRoller {
+        font-size: 3em;
+        font-family: monospace;
+        margin-bottom: 100px;
+      }
 
-<body>
-	<p id='stringRoller'>What is this?</p>
-	<button type='button' id='roll'>Roll It</button>
+      button {
+        height: 50px;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        padding-left: 20px;
+        padding-right: 20px;
+        cursor: pointer;
+      }
 
-	<script src="./src/stringRoller.min.js"></script>
-	<script>
-		window.onload = () => {
-			let rollBtn = document.querySelector("button#roll");
-			rollBtn.addEventListener("click", () => {
-				StringRoller('#stringRoller', { finalText: "This is StringRoller.js" }).roll();
-			});
-		}
-	</script>
-</body>
+      footer {
+        font-size: 1.3em;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 16px;
+      }
+    </style>
+  </head>
 
+  <body>
+    <div id="wrapper">
+      <p id="stringRoller">What is this?</p>
+      <button type="button" id="roll">Roll It</button>
+    </div>
+    <footer>A fun script, written with ❤️ in pure javascript</footer>
+    <script src="./src/stringRoller.js"></script>
+    <script>
+      window.onload = () => {
+        let rollBtn = document.querySelector("button#roll");
+        rollBtn.addEventListener("click", () => {
+          StringRoller("#stringRoller", {
+            finalText: "This is StringRoller.js",
+          }).roll();
+        });
+      };
+    </script>
+  </body>
 </html>
